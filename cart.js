@@ -37,6 +37,7 @@ const cart = [
 const sumCallback = (accumulate, curr)=> accumulate + curr.price;
 const summedPrice = cart.reduce(sumCallback, 0);
 
+// console.log(summedPrice);
 
 //////////////////PROBLEM 2////////////////////
 /*  
@@ -57,10 +58,11 @@ const summedPrice = cart.reduce(sumCallback, 0);
 function calcFinalPrice(cartTotal, couponValue, tax){
     return cartTotal+cartTotal*tax-couponValue;
 }
+console.log(calcFinalPrice(summedPrice, 2, 0.06))
 
-function calcFinalPrice(cartTotal, couponValue, tax){
-    return cartTotal-(cartTotal+cartTotal*tax)*couponValue; //if couponValue is a percentage instead
-}
+// function calcFinalPrice(cartTotal, couponValue, tax){
+//     return cartTotal-(cartTotal+cartTotal*tax)*couponValue; //if couponValue is a percentage instead
+// }
 //////////////////PROBLEM 3////////////////////
 /*  
     In this problem, you'll create a model for 
@@ -97,17 +99,20 @@ function calcFinalPrice(cartTotal, couponValue, tax){
 */
 
 //CODE HERE
-function Customer(name, email, payment, shipping, discount){
+class Customer{
+    constructor(name, email, payment, shipping, discount){
     this.name = name;
     this.email = email;
     this.payment = payment;
     this.shipping = shipping;
     this.discount = discount;
 }
+}
 const customer1 = new Customer(
-    "Bella"
+    "Bella",
     "bq12281025@gamil.com",
     "123456789",
     "11309 Oxford Pl",
     "20%OFF"
 );
+console.log(customer1);

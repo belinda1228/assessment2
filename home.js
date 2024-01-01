@@ -27,7 +27,7 @@ const greetUser = (username) =>{
 }
 
 
-
+console.log(greetUser("bella"));
 
 //////////////////PROBLEM 2////////////////////
 /* 
@@ -59,6 +59,7 @@ function canWeDeliver(zipCode){
         console.log("Sorry, we can't deliver to that address");
     }
 }
+ console.log(canWeDeliver(85205));
 
 
 /* 
@@ -88,7 +89,7 @@ function canWeDeliverTwo(zipCode){
     }
 }
 }
-
+ console.log(canWeDeliver(85215));
 
 //////////////////PROBLEM 3////////////////////
 /* 
@@ -127,7 +128,12 @@ const deals = [
 */
 
 //CODE HERE
-deals["title"].replace('15','10')
+for(let i = 0; i< deals.length; i++){
+    if (deals[i].desc ==="Applied to your entire order when you spend $30 or more"){
+        deals[i].title = deals[i].title.replace("15","10");
+    }
+}
+console.log(deals[0].title);
 
 
 /*
@@ -140,4 +146,9 @@ deals["title"].replace('15','10')
 */
 
 //CODE HERE
-deals["desc"].replace("March","April")
+for(let i = 0; i< deals.length; i++){
+    if (deals[i].title ==="Free Kids Meal with 2 Regular Entrees"){
+        deals[i].desc = deals[i].desc.replace("March","April");
+    }
+}
+console.log(deals[1].desc);

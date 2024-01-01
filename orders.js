@@ -39,7 +39,7 @@ class Ticket{
     }
     updateStatus(newStatus){
         this.status = newStatus;
-        console.log('The order for customer ${this.customerId} is now ${this.status}.')
+        console.log(`The order for customer ${this.customerId} is now ${this.status}.`)
     }
 }
 
@@ -58,7 +58,7 @@ class Ticket{
 //CODE HERE
 const firstTicket = new Ticket(["pizza","bread", "soda"], '7.03 PM', '575');
 
-
+console.log(firstTicket);
 /*
     Call the `updateStatus` method on
     `firstTicket` passing in the string
@@ -67,3 +67,4 @@ const firstTicket = new Ticket(["pizza","bread", "soda"], '7.03 PM', '575');
 
 //CODE HERE
 firstTicket.updateStatus('cooking');
+console.log(firstTicket);

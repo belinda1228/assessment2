@@ -96,16 +96,40 @@ console.log(category);
 */
 
 //CODE HERE
-const foodarr = {
-    name: "extra cheese",
-    price: 5,
-    catagory: "entree",
-    popularity: 10,
-    rating: 5,
-    tags: ["vegetarian"],
-    
-}
-
+const foodarr = [
+    {
+        name: "extra cheese",
+        price: 5,
+        catagory: "entree",
+        popularity: 10,
+        rating: 5,
+        tags: ["vegetarian"]
+    },
+    {
+        name: "italian sausage",
+        price: 10,
+        catagory: "entree",
+        popularity: 7,
+        rating: 4.8,
+        tags: ["meat lover"]
+    },
+    {
+        name: "garlic bread",
+        price: 6,
+        catagory: "appetizer",
+        popularity: 9,
+        rating: 5,
+        tags: ["bread"]
+    },
+    {
+        name: "pepperoni",
+        price: 10,
+        catagory: "entree",
+        popularity: 7,
+        rating: 4.6,
+        tags: ["pepperoni"]
+    }
+];
 
 //////////////////PROBLEM 4////////////////////
 /*
@@ -125,11 +149,11 @@ const foodarr = {
 
 //CODE HERE
 function filterFood(foodArray, filterTag){
-    return foodarr.filter(food => food["tags"].includes(filterTag));
+    return foodArray.filter(food => food["tags"].includes(filterTag));
 }
-const filteredFood = foodarr.filter(foodarr,"vegetarian");
+const filteredFood = filterFood(foodarr,"vegetarian");
 
-
+console.log(filteredFood);
 
 //////////////////PROBLEM 5////////////////////
 /*
@@ -168,7 +192,7 @@ const filteredFood = foodarr.filter(foodarr,"vegetarian");
 //CODE HERE
 function filterByProperty (property, number){
     const filtered = foodarr.filter(food =>{
-        return food[property] > number;
+        return food[property] == number;
     })
     return filtered;
 }
@@ -182,5 +206,5 @@ console.log(fiveStarFood);
 */
 
 //CODE HERE
-const popularFood = filterByProperty("rating",5);
+const popularFood = filterByProperty("popularity",10);
 console.log(popularFood);

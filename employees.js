@@ -26,7 +26,7 @@ class Employee{
         this.shifts = shifts;
     }
     getSchedule(){
-        console.log('${this.name} works on ${this.shifts}');
+        console.log(`${this.name} works on ${this.shifts}`);
     }
 }
 
@@ -49,7 +49,7 @@ const empOne = new Employee("Jess", "weekday mornings");
 */
 
 //CODE HERE
-empOne.getSchedule();
+console.log(empOne.getSchedule());
 
 
 
@@ -114,6 +114,7 @@ const manager = new Manager("Winston", "weekday afternoon", ["Cece", "Schmidt"])
 //CODE HERE
 
 manager.getEmployees();
+console.log(manager.getEmployees());
 
 /*
     Call the `addEmployee` method on the 
@@ -132,3 +133,4 @@ manager.addEmployee("Coach");
 
 //CODE HERE
 manager.getEmployees();
+console.log(manager.getEmployees())
